@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kimekai Hero - Value Stack Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2e5a; }
+
+  /* NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px; background: #fff;
+  }
+  .logo { font-family: Georgia, serif; font-weight: bold; font-size: 30px; letter-spacing: 1px; }
+  .logo .k { color: #1a3a8f; } .logo .dot { color: #c0392b; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: #1a2e5a; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; }
+  .nav-links .join { border: 1.5px solid #1a3a8f; border-radius: 4px; padding: 8px 18px; }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 760px;
+    background: url('https://kimekai.com.au/wp-content/uploads/2026/02/Kimekai-hero-1500_600.webp') center/cover no-repeat;
+    display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+    gap: 40px; padding: 60px 56px;
+  }
+  .hero::before { content:''; position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,30,60,.72) 0%, rgba(20,30,60,.45) 50%, rgba(20,30,60,.30) 100%); }
+
+  /* LEFT */
+  .hero-left { position: relative; z-index: 2; color: #fff; }
+  .hero-left h1 { font-family: Georgia, serif; font-style: italic; font-size: 64px; letter-spacing: 2px; margin-bottom: 14px; }
+  .hero-left .tagline { font-family: Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.35; max-width: 460px; margin-bottom: 30px; font-weight: 300; }
+
+  .stack {
+    background: rgba(13, 22, 45, .55);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 14px; padding: 24px 26px; max-width: 470px;
+    backdrop-filter: blur(2px);
+  }
+  .stack h3 { font-size: 17px; font-weight: 700; margin-bottom: 16px; letter-spacing: .3px; }
+  .stack h3 b { color: #f2c14e; }
+  .stack ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .stack li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.35; }
+  .stack li .tick {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: #c0392b; color: #fff; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .trust {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.15);
+    font-size: 14px; color: rgba(255,255,255,.9); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .trust .stars { color: #fbbc05; letter-spacing: 1px; }
+  .trust .sep { opacity: .4; }
+
+  /* FORM CARD */
+  .hero-right { position: relative; z-index: 2; }
+  .form-card { background: #fff; border-radius: 20px; padding: 40px 44px; box-shadow: 0 24px 70px rgba(0,0,0,.45); max-width: 520px; margin-left: auto; }
+  .form-card h2 { text-align: center; color: #1a3a8f; font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+  .form-card .sub { text-align: center; color: #555; font-size: 16px; margin-bottom: 28px; }
+  .form-card .sub b { color: #c0392b; }
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-size: 15px; font-weight: 700; color: #1a2e5a; margin-bottom: 7px; }
+  .field label span { color: #c0392b; }
+  .field input, .field select {
+    width: 100%; padding: 14px 16px; border: 1px solid #d8dce6; border-radius: 8px;
+    font-size: 15px; color: #333; background: #fafbfd; outline: none;
+  }
+  .field input:focus, .field select:focus { border-color: #1a3a8f; }
+  .btn-submit {
+    width: 100%; padding: 16px; margin-top: 8px; border: none; border-radius: 30px;
+    background: #4caf50; color: #fff; font-size: 17px; font-weight: 700; cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero::before { background: rgba(20,30,60,.65); }
+    .form-card { margin: 0 auto; }
+    .hero-left h1 { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="k">KIME</span><span class="dot">KAI</span></div>
+  <div class="nav-links">
+    <a>WELCOME</a><a>OUR PROGRAMS</a><a>CLASS TIMES</a><a>ONLINE STORE</a>
+    <a>OWN A DOJO</a><a>MEMBERS ONLY</a><a>CONTACT US</a><a class="join">JOIN NOW</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <!-- LEFT: heading + value stack -->
+  <div class="hero-left">
+    <h1>KIMEKAI</h1>
+    <div class="tagline">Premium Martial Arts tuition for all ages and all levels of skill.</div>
+
+    <div class="stack">
+      <h3>Your <b>$19.95</b> intro offer includes:</h3>
+      <ul>
+        <li><span class="tick">&#10003;</span> 2 weeks of unlimited classes</li>
+        <li><span class="tick">&#10003;</span> A uniform and belt to keep, free</li>
+        <li><span class="tick">&#10003;</span> Full grading syllabus booklet, white belt to black belt</li>
+        <li><span class="tick">&#10003;</span> Access to our online training portal</li>
+      </ul>
+      <div class="trust">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 from 230+ reviews
+        <span class="sep">|</span> 20,000+ students coached
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: form -->
+  <div class="hero-right">
+    <div class="form-card">
+      <h2>Claim Your Intro Offer Today!</h2>
+      <div class="sub">2 weeks unlimited training. Just <b>$19.95</b>.</div>
+      <div class="field"><label>Name <span>*</span></label><input type="text" /></div>
+      <div class="field"><label>Phone <span>*</span></label><input type="tel" /></div>
+      <div class="field"><label>Email</label><input type="email" /></div>
+      <div class="field"><label>Choose a Program</label>
+        <select><option></option><option>Mini Thunderbolts (3-4)</option><option>Thunderbolts (4-7)</option><option>Young Samurai (8-13)</option><option>Cadets (14-17)</option><option>Adults (18+)</option><option>MMA / BJJ</option></select>
+      </div>
+      <button class="btn-submit">Submit</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
